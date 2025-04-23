@@ -33,14 +33,42 @@ Auf den Sitzplatz-Displays werden Reservierungs- oder Belegungs-Texte
 angezeigt, z.B. "Mannheim - Hamburg" oder "belegt bis Hannover".
 
 Zusätzlich zu den Displays speichern wir für ein Fahrzeug noch eine Liste
-der Stationen auf der aktuellen Route sowie für jeden Sitz eine Reihe
-von Reservierungen, jeweils bestehend aus zwei Stationen.
+der Stationen auf der aktuellen Route, die nächste Station,
+sowie für jeden Sitz eine Reihe von *Reservierungen* (`Reservation`).,
+jeweils bestehend aus zwei Stationen.
 
-## Zielsetzung
+## Zielsetzung/Verhalten
+
+Das System soll während der Fahrt die Displays mit den aktuellen Informationen
+versorgen.
+Dabei gibt es eine Reihe von Regeln, die beachtet werden müssen:
+
+- Decken-Displays:
+  - Bei Stand an einer Station wird nur der Stationsname angezeigt.
+  - Während der Fahrt wird dem Stationsnamen der Text "Nächster Halt:"
+    vorangestellt.
+- Sitzplatz-Displays:
+  - Es wird als Text jeweils die nächste gültige Reservierung angezeigt.
+  - Beispiel 1: Wenn der nächste Halt Mannheim ist und es eine Reservierung
+    von Mannheim nach Hamburg gibt, wird "Mannheim - Hamburg" angezeigt.
+  - Beispiel 2: Wenn der nächste Halt Mannheim ist und es eine Reservierung
+    von Frankfurt nach Hamburg gibt, wird "Frankfurt - Hamburg" angezeigt.
+  - Dabei wird aus allen Reservierungen für einen Platz immer diejenige
+    gewählt, die in Fahrtrichtung am nächsten zur aktuellen Station liegt.
+
+## Umsetzung
 
 Es wird ein Gerüst aus Klassen und Funktionen vorgegeben,
 das das oben beschriebene System modelliert.
+Für diese Klassen gibt es bereits Demo-Programme, die den Umgang und
+das erwartete Verhalten für eine Beispiel-Route zeigen.
+
 Die Aufgabe besteht darin, die vorgegebenen Klassen und Funktionen
 zu implementieren und die Funktionalität zu testen.
 
-Dazu ist eine Reihe an Tests vorgegeben, die das Verhalten des Systems überprüfen.
+## TODO
+
+- Tests schreiben.
+- Entscheiden, welche Funktionen vorgegeben bleiben und welche zu Aufgaben werden.
+- Die Aufgaben hier dokumentieren.
+- Hilfsmaterial für die Einarbeitung erstellen.
