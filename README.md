@@ -17,6 +17,19 @@ jedoch soll hier eine vereinfachte Version vorgestellt werden,
 bei der Wagen mit Decken- und Sitzplatz-Displays modelliert und mit Daten
 aufgrund eines Fahrplans sowie Positionsdaten versorgt werden.
 
+## Anforderungen
+
+Ziel ist es, ein vereinfachtes Fahgast-Informations-System mit den
+folgenden Eigenschaften zu entwickeln:
+
+- Es sollen Fahrzeuge mit einer beliebigen Anzahl von Wagen modelliert werden.
+- In jedem Wagen gibt es Decken-Displays, die allgemeine Informationen
+  zur aktuellen/nächsten Station anzeigen.
+- In jedem Wagen gibt es Sitzplatz-Displays, die Informationen zu den
+  Reservierungen der Sitzplätze anzeigen.
+- Die Informationen sollen jeweils bei Ankunft und/oder Abfahrt an einer Station
+  aktualisiert werden.
+
 ## Fahrzeug-Modell
 
 Ein *Fahrzeug* (`Vehicle`) ist i.W. eine Aneinanderreihung von *Wagen* (`Coach`),
