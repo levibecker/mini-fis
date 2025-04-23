@@ -29,7 +29,7 @@ void run_ma_hh()
 
     // Wir fahren die Route ab.
     // An jeder Station zeigen wir auf dem Decken-Display den Namen der Station an,
-    // nach Abfahrt dann einen Text mit dem nächsten Halt und der Ausstiegsrichtung.
+    // nach Abfahrt dann einen Text mit dem nächsten Halt.
     // Auf dem Sitzplatz-Display zeigen wir den passenden Reservierungstext an.
     // Nach jeder Anzeige warten wir auf eine Eingabe, bevor die nächste Anzeige erfolgt.
 
@@ -43,7 +43,7 @@ void run_ma_hh()
 
     // Nach Abfahrt in Mannheim:
     // Aktualisiere den Anzeigetext auf "Nächster Halt: Frankfurt (Main) Hbf".
-    ceiling.updateText("Nächster Halt: Frankfurt (Main) Hbf \nAusstieg in Fahrtrichtung links.");
+    ceiling.updateText("Nächster Halt: Frankfurt (Main) Hbf");
     ceiling.show();
     seat.show();
     wait_for_input();
@@ -59,7 +59,7 @@ void run_ma_hh()
     // Weitere Simulation der Fahrt...
 
     // Nach Abfahrt in Frankfurt:
-    ceiling.updateText("Nächster Halt: Kassel-Wilhelmshöhe \nAusstieg in Fahrtrichtung rechts.");
+    ceiling.updateText("Nächster Halt: Kassel-Wilhelmshöhe");
     ceiling.show();
     seat.show();
     wait_for_input();
@@ -71,7 +71,7 @@ void run_ma_hh()
     wait_for_input();
 
     // Nach Abfahrt in Kassel:
-    ceiling.updateText("Nächster Halt: Göttingen \nAusstieg in Fahrtrichtung links.");
+    ceiling.updateText("Nächster Halt: Göttingen");
     ceiling.show();
     seat.show();
     wait_for_input();
@@ -83,7 +83,7 @@ void run_ma_hh()
     wait_for_input();
 
     // Nach Abfahrt in Göttingen:
-    ceiling.updateText("Nächster Halt: Hannover Hbf \nAusstieg in Fahrtrichtung rechts.");
+    ceiling.updateText("Nächster Halt: Hannover Hbf");
     ceiling.show();
     seat.show();
     wait_for_input();
@@ -96,7 +96,7 @@ void run_ma_hh()
     wait_for_input();
 
     // Nach Abfahrt in Hannover:
-    ceiling.updateText("Nächster Halt: Hamburg Hbf \nAusstieg in Fahrtrichtung links.");
+    ceiling.updateText("Nächster Halt: Hamburg Hbf");
     ceiling.show();
     wait_for_input();
 

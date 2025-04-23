@@ -40,7 +40,7 @@ void run_ma_hh()
 
     // Nach Abfahrt in Mannheim:
     // Aktualisiere den Anzeigetext auf "Nächster Halt: Frankfurt (Main) Hbf".
-    coach.updateCeilingDisplays("Nächster Halt: Frankfurt (Main) Hbf \nAusstieg in Fahrtrichtung links.");
+    coach.updateCeilingDisplays("Nächster Halt: Frankfurt (Main) Hbf");
     coach.showAllDisplays();
     wait_for_input();
 
@@ -54,7 +54,7 @@ void run_ma_hh()
     // Weitere Simulation der Fahrt...
 
     // Nach Abfahrt in Frankfurt:
-    coach.updateCeilingDisplays("Nächster Halt: Kassel-Wilhelmshöhe \nAusstieg in Fahrtrichtung rechts.");
+    coach.updateCeilingDisplays("Nächster Halt: Kassel-Wilhelmshöhe");
     coach.showAllDisplays();
     wait_for_input();
 
@@ -64,7 +64,7 @@ void run_ma_hh()
     wait_for_input();
 
     // Nach Abfahrt in Kassel:
-    coach.updateCeilingDisplays("Nächster Halt: Göttingen \nAusstieg in Fahrtrichtung links.");
+    coach.updateCeilingDisplays("Nächster Halt: Göttingen");
     coach.showAllDisplays();
     wait_for_input();
 
@@ -74,7 +74,7 @@ void run_ma_hh()
     wait_for_input();
 
     // Nach Abfahrt in Göttingen:
-    coach.updateCeilingDisplays("Nächster Halt: Hannover Hbf \nAusstieg in Fahrtrichtung rechts.");
+    coach.updateCeilingDisplays("Nächster Halt: Hannover Hbf");
     coach.showAllDisplays();
     wait_for_input();
 
@@ -85,7 +85,7 @@ void run_ma_hh()
     wait_for_input();
 
     // Nach Abfahrt in Hannover:
-    coach.updateCeilingDisplays("Nächster Halt: Hamburg Hbf \nAusstieg in Fahrtrichtung links.");
+    coach.updateCeilingDisplays("Nächster Halt: Hamburg Hbf");
     coach.showAllDisplays();
     wait_for_input();
 
