@@ -4,6 +4,7 @@
 // Abfragen, die im Laufe einer Fahrt an ein `Display`-Objekt gerichtet werden könnten.
 
 #include "coach.h"
+#include "demo_common.h"
 #include <iostream>
 
 void run_ma_hh();
@@ -24,27 +25,11 @@ void run_ma_hh()
     coach.addCeilingDisplay(Display());
     coach.addSeatDisplay("42", Display());
 
-    // Ausgabe vor Start des Demo-Laufs:
-    std::cout
-        << "Demo-Lauf für Beispiel-Route: " << std::endl;
-    std::cout << "Mannheim Hbf -> "
-              << "Frankfurt (Main) Hbf -> "
-              << "Kassel-Wilhelmshöhe -> "
-              << "Göttingen -> "
-              << "Hannover Hbf -> "
-              << "Hamburg Hbf"
-              << std::endl;
-    std::cout << "Reservierungen: "
-              << "Mannheim -> Frankfurt, "
-              << "Kassel -> Hannover, "
-              << "Hannover -> Hamburg"
-              << std::endl;
+    print_info_ma_hh();
 
-    // Wir fahren die Route ab.
-    // An jeder Station zeigen wir auf dem Decken-Display den Namen der Station an,
-    // nach Abfahrt dann einen Text mit dem nächsten Halt und der Ausstiegsrichtung.
-    // Auf dem Sitzplatz-Display zeigen wir den passenden Reservierungstext an.
-    // Nach jeder Anzeige warten wir auf eine Eingabe, bevor die nächste Anzeige erfolgt.
+    // Wir fahren die selbe Route ab und führen die selben Aktionen aus,
+    // wie in der Display-Demo.
+    // Allerdings verwenden wir hier die Coach-Klasse, um die Displays zu steuern.
 
     // Vor Start in Mannheim:
     // Aktualisiere den Anzeigetext auf "Mannheim Hbf".
@@ -109,10 +94,4 @@ void run_ma_hh()
     coach.updateSeatDisplay("42", "");
     coach.showAllDisplays();
     wait_for_input();
-}
-
-void wait_for_input()
-{
-    std::cout << "Enter um fortzufahren..." << std::endl;
-    std::cin.get();
 }

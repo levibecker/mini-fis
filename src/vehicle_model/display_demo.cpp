@@ -3,11 +3,11 @@
 // von interesse, sondern enthält Beispiele für typische Folgen von Kommandos und
 // Abfragen, die im Laufe einer Fahrt an ein `Display`-Objekt gerichtet werden könnten.
 
+#include "demo_common.h"
 #include "display.h"
 #include <iostream>
 
 void run_ma_hh();
-void wait_for_input();
 
 int main()
 {
@@ -25,21 +25,7 @@ void run_ma_hh()
     // Erzeuge ein Sitzplatz-Display-Objekt mit einem Standardtext.
     Display seat;
 
-    // Ausgabe vor Start des Demo-Laufs:
-    std::cout << "Demo-Lauf für Decken-Display." << std::endl;
-    std::cout << "Beispiel-Route: "
-              << "Mannheim Hbf -> "
-              << "Frankfurt (Main) Hbf -> "
-              << "Kassel-Wilhelmshöhe -> "
-              << "Göttingen -> "
-              << "Hannover Hbf -> "
-              << "Hamburg Hbf"
-              << std::endl;
-    std::cout << "Reservierungen: "
-              << "Mannheim -> Frankfurt, "
-              << "Kassel -> Hannover, "
-              << "Hannover -> Hamburg"
-              << std::endl;
+    print_info_ma_hh();
 
     // Wir fahren die Route ab.
     // An jeder Station zeigen wir auf dem Decken-Display den Namen der Station an,
@@ -120,10 +106,4 @@ void run_ma_hh()
     seat.updateText("");
     seat.show();
     wait_for_input();
-}
-
-void wait_for_input()
-{
-    std::cout << "Enter um fortzufahren..." << std::endl;
-    std::cin.get();
 }
