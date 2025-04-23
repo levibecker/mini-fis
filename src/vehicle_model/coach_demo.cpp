@@ -1,7 +1,7 @@
-// Dies ist ein Programm, das die Verwendung der Klasse `Display` demonstriert.
+// Dies ist ein Programm, das die Verwendung der Klasse `Coach` demonstriert.
 // Es ist an sich nicht für den Produktivbetrieb eines Fahrgasinformationssystems
-// von interesse, sondern enthält Beispiele für typische Folgen von Kommandos und
-// Abfragen, die im Laufe einer Fahrt an ein `Display`-Objekt gerichtet werden könnten.
+// von Interesse, sondern enthält Beispiele für typische Folgen von Kommandos und
+// Abfragen, die im Laufe einer Fahrt an ein `Coach`-Objekt gerichtet werden könnten.
 
 #include "coach.h"
 #include "demo_common.h"
@@ -17,7 +17,7 @@ int main()
     return 0;
 }
 
-/// Beispiel-Ablauf für ein Decken-Display auf einer Fahrt von Mannheim nach Hamburg.
+/// Beispiel-Ablauf für eine Fahrt von Mannheim nach Hamburg.
 void run_ma_hh()
 {
     // Erzeuge ein Coach-Objekt mit einem Decken- und einem Sitzplatz-Display.

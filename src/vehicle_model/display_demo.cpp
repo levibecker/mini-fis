@@ -1,6 +1,6 @@
 // Dies ist ein Programm, das die Verwendung der Klasse `Display` demonstriert.
 // Es ist an sich nicht für den Produktivbetrieb eines Fahrgasinformationssystems
-// von interesse, sondern enthält Beispiele für typische Folgen von Kommandos und
+// von Interesse, sondern enthält Beispiele für typische Folgen von Kommandos und
 // Abfragen, die im Laufe einer Fahrt an ein `Display`-Objekt gerichtet werden könnten.
 
 #include "demo_common.h"
@@ -16,7 +16,7 @@ int main()
     return 0;
 }
 
-/// Beispiel-Ablauf für ein Decken-Display auf einer Fahrt von Mannheim nach Hamburg.
+/// Beispiel-Ablauf für eine Fahrt von Mannheim nach Hamburg.
 void run_ma_hh()
 {
     // Erzeuge ein Decken-Display-Objekt mit einem Standardtext.
