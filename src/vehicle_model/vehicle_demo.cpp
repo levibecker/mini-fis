@@ -29,6 +29,8 @@ void run_ma_hh()
     c1.addSeatDisplay("42", Display());
 
     vehicle.addCoach(c1);
+
+    // Route hinzufügen
     vehicle.addStop("Mannheim Hbf");
     vehicle.addStop("Frankfurt (Main) Hbf");
     vehicle.addStop("Kassel-Wilhelmshöhe");
@@ -37,7 +39,13 @@ void run_ma_hh()
     vehicle.addStop("Hamburg Hbf");
     vehicle.setCurrentStop(0);
 
+    // Reservierungen hinzufügen (alle für Wagen 0, Platz 42)
+    vehicle.addReservation(0, "42", Reservation("Mannheim Hbf", "Frankfurt (Main) Hbf"));
+    vehicle.addReservation(0, "42", Reservation("Kassel-Wilhelmshöhe", "Hannover Hbf"));
+    vehicle.addReservation(0, "42", Reservation("Hannover Hbf", "Hamburg Hbf"));
+
     print_info_ma_hh();
+    vehicle.showAllReservations();
 
     // Wir fahren die selbe Route wie in den Display- und Coach-Demos.
     // Allerdings verwenden wir hier direkt die Vehicle-Klasse, um die Displays zu steuern.

@@ -1,4 +1,5 @@
 #include "vehicle.h"
+#include <iostream>
 
 Vehicle::Vehicle()
     : next_stop("")
@@ -8,6 +9,7 @@ Vehicle::Vehicle()
 void Vehicle::addCoach(Coach const& coach)
 {
     coaches.push_back(coach);
+    reservations.push_back(std::unordered_map<std::string, std::vector<Reservation>>());
 }
 
 void Vehicle::addStop(std::string const& stop)
@@ -15,10 +17,41 @@ void Vehicle::addStop(std::string const& stop)
     route.push_back(stop);
 }
 
+void Vehicle::addReservation(size_t coachIndex, std::string const& seatId, Reservation const& reservation)
+{
+    if (coachIndex < reservations.size()) {
+        // Eine leere Liste von Reservierungen für den Sitzplatz erstellen,
+        // falls noch keine Reservierungen vorhanden sind.
+        auto& coach_res = reservations[coachIndex];
+        if (!coach_res.contains(seatId)) {
+            coach_res[seatId] = std::vector<Reservation>();
+        }
+        // Reservierung hinzufügen.
+        auto& seat_res = reservations[coachIndex][seatId];
+        insert_reservation(reservation, seat_res, route);
+    } else {
+        std::cerr << "Wagen-Index " << coachIndex << " nicht gefunden." << std::endl;
+    }
+}
+
 void Vehicle::showAllDisplays() const
 {
     for (const auto& coach : coaches) {
         coach.showAllDisplays();
+    }
+}
+
+void Vehicle::showAllReservations() const
+{
+    for (size_t i = 0; i < coaches.size(); ++i) {
+        for (const auto& [seatId, reservations] : reservations[i]) {
+            std::cout << "Wagen " << i << ", ";
+            std::cout << "Platz " << seatId << ": ";
+            for (const auto& reservation : reservations) {
+                std::cout << reservation.getDisplayText() << ", ";
+            }
+            std::cout << std::endl;
+        }
     }
 }
 
@@ -57,5 +90,13 @@ void Vehicle::departFromStop()
 
 void Vehicle::updateSeatDisplays()
 {
-    // TODO: Aktualisierung aufgrund gegebener Reservierungsdaten implementieren.
+    for (size_t i = 0; i < coaches.size(); ++i) {
+        auto& coach = coaches[i];
+        for (const auto& [seatId, reservations] : reservations[i]) {
+            auto reservation = get_next_reservation(reservations, next_stop, route);
+            if (!reservation.isEmpty()) {
+                coach.updateSeatDisplay(seatId, reservation.getDisplayText());
+            }
+        }
+    }
 }

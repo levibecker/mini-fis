@@ -2,7 +2,9 @@
 #define VEHICLE_H
 
 #include "coach.h"
+#include "reservation.h"
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 /// Ein Fahrzeug (Vehicle) repräsentiert einen Zug während der Fahrt.
@@ -13,6 +15,10 @@ struct Vehicle {
 
     /// Die Liste der Wagen (Coaches) im Zug.
     std::vector<Coach> coaches;
+
+    /// Die Reservierungen für die Sitzplätze im Zug.
+    /// Für jeden Wagen eine Abbildung von dessen Sitzplatz-IDs auf die Reservierungen.
+    std::vector<std::unordered_map<std::string, std::vector<Reservation>>> reservations;
 
     /// Die aktuelle Route.
     std::vector<std::string> route;
@@ -31,12 +37,19 @@ struct Vehicle {
     /// Fügt eine neue Station zur Route hinzu.
     void addStop(std::string const& stop);
 
+    /// Fügt eine Reservierung für einen Sitzplatz hinzu.
+    /// Erwartet den Wagen-Index, die Sitzplatz-ID und die Reservierung.
+    void addReservation(size_t coachIndex, std::string const& seatId, Reservation const& reservation);
+
     /// Setzt die aktuelle Station des Zuges auf die Stelle pos in der Route.
     /// Falls die Position nicht existiert, wird next_stop auf den leeren String gesetzt.
     void setCurrentStop(size_t pos);
 
     /// Zeigt alle Displays in allen Wagen an.
     void showAllDisplays() const;
+
+    /// Zeigt alle Reservierungen an.
+    void showAllReservations() const;
 
     /// Ankunft an einer Station.
     /// Akualisiert die Displays und schaltet next_stop weiter.
