@@ -19,11 +19,13 @@ aufgrund eines Fahrplans sowie Positionsdaten versorgt werden.
 
 ## Fahrzeug-Modell
 
-Ein *Fahrzeug* ist i.W. eine Aneinanderreihung von *Wagen*,
+Ein *Fahrzeug* (`Vehicle`) ist i.W. eine Aneinanderreihung von *Wagen* (`Coach`),
 die ihrerseits wiederum einer Reihe von *Displays* bestehen.
 Dabei unterscheiden wir zwei Arten, zum Einen *Decken-Displays*
 und zum Anderen *Sitzplatz-Displays*.
 
+Technisch gesehen sind die Display-Arten gleich, daher verwenden wir auch
+für beide Arten die gleiche Klasse (`Display`).
 Auf den Decken-Displays werden während einer Fahrt allgemeine Informations-
 Texte wie z.B. "Nächster Halt Mannheim" oder "Ausstieg in Fahrtrichtung links"
 angezeigt.
