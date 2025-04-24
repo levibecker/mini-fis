@@ -3,6 +3,7 @@
 
 #include "coach.h"
 #include "reservation.h"
+#include "reservation_logic.h"
 #include <string>
 #include <unordered_map>
 #include <vector>

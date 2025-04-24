@@ -1,0 +1,3 @@
+add_library(reservation_logic STATIC reservation_logic.cpp reservation_logic.h)
+target_include_directories(reservation_logic PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(reservation_logic reservations)
