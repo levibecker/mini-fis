@@ -82,9 +82,9 @@ zu implementieren und die Funktionalität zu testen.
 ## Empfohlene Reihenfolge der Aufgaben
 
 - Reservierungen (in `src/models/reservation`)
-- Reservierungslogik (in `src/logic`)
 - Displays (in `src/models/display`)
 - Wagen (in `src/models/coach`)
+- Reservierungslogik (in `src/logic`)
 - Fahrzeug (in `src/models/vehicle`)
 
 ## Weitere Aufgaben (Ideen)
