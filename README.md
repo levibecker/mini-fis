@@ -79,9 +79,18 @@ das erwartete Verhalten für eine Beispiel-Route zeigen.
 Die Aufgabe besteht darin, die vorgegebenen Klassen und Funktionen
 zu implementieren und die Funktionalität zu testen.
 
-## TODO
+## Empfohlene Reihenfolge der Aufgaben
 
-- Tests schreiben.
-- Entscheiden, welche Funktionen vorgegeben bleiben und welche zu Aufgaben werden.
-- Die Aufgaben hier dokumentieren.
-- Hilfsmaterial für die Einarbeitung erstellen.
+- Reservierungen (in `src/models/reservation`)
+- Reservierungslogik (in `src/logic`)
+- Displays (in `src/models/display`)
+- Wagen (in `src/models/coach`)
+- Fahrzeug (in `src/models/vehicle`)
+
+## Weitere Aufgaben (Ideen)
+
+- Erstellen Sie ausführlichere System-Tests.
+  Bauen Sie z.B. die Demo-Programme als Tests nach, um die Funktionalität
+  automatisiert testen zu können.
+- Erweitern Sie das System, so dass Reservierungen und Fahrplandaten
+  aus einer externen Quelle (z.B. einer CSV-Datei) geladen werden.
