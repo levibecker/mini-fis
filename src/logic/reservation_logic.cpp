@@ -67,13 +67,16 @@ Reservation get_next_reservation(std::vector<Reservation> const& reservations, s
 
 bool is_valid_for_route(Reservation const& reservation, std::vector<std::string> const& stops)
 {
+    // Überprüfen, ob die Reservierung leer ist
     if (reservation.isEmpty()) {
         return false;
     }
 
+    // Bestimmen der Positionen der from- und to-Haltestellen in der Liste der Haltestellen.
     auto from_it = std::find(stops.begin(), stops.end(), reservation.from);
     auto to_it = std::find(stops.begin(), stops.end(), reservation.to);
 
+    // Überprüfen, ob die Haltestellen gültig sind und die from-Haltestelle vor der to-Haltestelle liegt.
     if (from_it == stops.end() || to_it == stops.end() || from_it >= to_it) {
         return false; // Ungültige Reservierung
     }
