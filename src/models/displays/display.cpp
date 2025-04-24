@@ -14,22 +14,26 @@ Display::Display(std::string const& initialText)
 
 void Display::updateText(std::string const& newText)
 {
+    // TODO
+
     // Aktualisieren Sie den Text des Displays,
     // indem Sie den übergebenen neuen Text setzen.
     // D.h. überschreiben Sie `text` mit `newText`.
-    text = newText;
 }
 
 std::string Display::getText() const
 {
+    // TODO
+
     // Liefern Sie den Wert von `text` zurück.
-    return text;
+    return "";
 }
 
 void Display::show() const
 {
+    // TODO
+
     // Geben Sie das Ergebnis von `getText()` auf der Konsole aus.
-    std::cout << getText() << std::endl;
 
     // Anmerkung: In einer echten Anwendung würde hier wahrscheinlich
     // eine grafische Benutzeroberfläche oder ein physisches Display
