@@ -1,3 +1,15 @@
 add_library(reservation_logic STATIC reservation_logic.cpp reservation_logic.h)
 target_include_directories(reservation_logic PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(reservation_logic reservations)
+
+add_executable(insert_reservation_tests insert_reservation_tests.cpp)
+target_link_libraries(insert_reservation_tests reservation_logic Catch2::Catch2WithMain)
+catch_discover_tests(insert_reservation_tests)
+
+add_executable(get_next_reservation_tests get_next_reservation_tests.cpp)
+target_link_libraries(get_next_reservation_tests reservation_logic Catch2::Catch2WithMain)
+catch_discover_tests(get_next_reservation_tests)
+
+add_executable(is_valid_for_route_tests is_valid_for_route_tests.cpp)
+target_link_libraries(is_valid_for_route_tests reservation_logic Catch2::Catch2WithMain)
+catch_discover_tests(is_valid_for_route_tests)
