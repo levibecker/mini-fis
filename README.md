@@ -19,7 +19,7 @@ aufgrund eines Fahrplans sowie Positionsdaten versorgt werden.
 
 ## Anforderungen
 
-Ziel ist es, ein vereinfachtes Fahgast-Informations-System mit den
+Ziel ist es, ein vereinfachtes Fahrgast-Informations-System mit den
 folgenden Eigenschaften zu entwickeln:
 
 - Es sollen Fahrzeuge mit einer beliebigen Anzahl von Wagen modelliert werden.
