@@ -21,13 +21,10 @@ int main()
 void run_ma_hh()
 {
     // Erzeuge ein Vehicle-Objekt mit einem Wagen wie in der Coach-Demo.
-
     Vehicle vehicle;
-
     Coach c1;
     c1.addCeilingDisplay(Display());
     c1.addSeatDisplay("42", Display());
-
     vehicle.addCoach(c1);
 
     // Route hinzufügen
