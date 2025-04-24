@@ -15,17 +15,12 @@ Display::Display(std::string const& initialText)
 void Display::updateText(std::string const& newText)
 {
     // TODO
-
-    // Aktualisieren Sie den Text des Displays,
-    // indem Sie den übergebenen neuen Text setzen.
-    // D.h. überschreiben Sie `text` mit `newText`.
 }
 
 std::string Display::getText() const
 {
     // TODO
 
-    // Liefern Sie den Wert von `text` zurück.
     return "";
 }
 

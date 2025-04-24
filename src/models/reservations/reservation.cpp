@@ -10,7 +10,6 @@ bool Reservation::isEmpty() const
 {
     // TODO
 
-    // Eine Reservierung ist leer, wenn sowohl von- als auch zu-String leer sind.
     return false;
 }
 
@@ -18,6 +17,5 @@ std::string Reservation::getDisplayText() const
 {
     // TODO
 
-    // Setzen Sie den Text mittels des `+`-Operators zusammen.
     return "";
 }
