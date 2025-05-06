@@ -58,16 +58,30 @@ void Vehicle::addReservation(size_t coachIndex, std::string const& seatId, Reser
 void Vehicle::showAllDisplays() const
 {
     // TODO
+    // Iterieren Sie über alle Wagen und rufen Sie die Methode `show()` für jedes Display auf.
+    
+    for (const auto& coach : coaches) {
+        coach.showAllDisplays();
+    }
+
 }
 
 void Vehicle::showAllReservations() const
 {
     // TODO
+
+    // Iterieren Sie über alle Wagen und rufen Sie die Methode `show()` für jedes Display auf.
+    for (const auto& coach : coaches) {
+        coach.showAllDisplays();
+    }
+
 }
 
 void Vehicle::setCurrentStop(size_t pos)
 {
     // TODO
+
+    
 }
 
 void Vehicle::arriveAtStop()
