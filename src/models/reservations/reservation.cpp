@@ -15,5 +15,5 @@ std::string Reservation::getDisplayText() const
 {
     // TODO
 
-    return "";
+    return from + " - " + to;
 }

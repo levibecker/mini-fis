@@ -9,6 +9,10 @@ Vehicle::Vehicle()
 void Vehicle::addCoach(Coach const& coach)
 {
     // TODO
+    
+    coaches.push_back(coach);
+    reservations.push_back(std::unordered_map<std::string, std::vector<Reservation>>());
+
 }
 
 void Vehicle::addStop(std::string const& stop)
